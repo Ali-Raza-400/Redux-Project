@@ -1,18 +1,25 @@
-import { ADD_TO_CART } from "../constant";
-const initialState={
-    cardData:[]
+import { ADD_TO_CART ,REMOVE_TO_CART} from '../constant'
+const initialState = {
+    cardData: []
 }
-export default cartItems=(state=initialState,action)=>{
-
-    switch(action.type){
+export default function cardItems(state = [], action) {
+    switch (action.type) {
         case ADD_TO_CART:
-            return {
+            // console.warn("reducer",action)
+            return [
                 ...state,
-                cardData:data
-            }
-            break
-            default:
-                return state
-
+                {cardData: action.data}
+            ]
+        case REMOVE_TO_CART:
+            // console.warn("reducer",action)
+            state.pop()
+            return [
+                ...state,
+           
+            ]
+        default:
+            return state
     }
+
+
 }

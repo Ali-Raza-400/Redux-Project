@@ -76,6 +76,9 @@
 .Containerx{
   display: flex;
 }
+.remove-cart-btn{
+  background-color: greenyellow;
+}
 /*  */
 @keyframes App-logo-spin {
   from {

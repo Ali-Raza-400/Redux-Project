@@ -1,8 +1,8 @@
 // root reducer jo saab reducer ko aik bana ke store be snd kar de ga 
 
-import cartItems from './reducer'
-import { combineReducers } from 'redux'
+import {combineReducers} from 'redux'
+import cardItems from './reducer'
 
 export default combineReducers({
-    cartItems
+    cardItems,
 })
